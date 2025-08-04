@@ -1,23 +1,11 @@
 # JWE JWK Encrypt/Decrypt
 
-A Go example for encrypting and decrypting data using JSON Web Encryption (JWE).
-
-## Overview
-
-This repository demonstrates how to encrypt and decrypt data using JWE (JSON Web Encryption) with these JWK (JSON Web Key) types:
+A Go example for encrypting and decrypting data using JSON Web Encryption (JWE)  with these JWK (JSON Web Key) types:
 - AES keys (A256KW)
 - RSA keys (RSA_OAEP_256)
 - ECDH keys (ECDH_ES_A256KW)
 
 The implementation uses [github.com/lestrrat-go/jwx/v3](https://github.com/lestrrat-go/jwx) for JWE operations.
-
-## Installation
-
-```bash
-git clone https://github.com/justincranford/jwe-encrypt-decrypt.git
-cd jwe-encrypt-decrypt
-go mod tidy
-```
 
 ## Requirements
 
@@ -26,6 +14,14 @@ This project requires:
 - github.com/lestrrat-go/jwx/v3
 - github.com/google/uuid
 - github.com/stretchr/testify (for tests)
+
+## Installation
+
+```bash
+git clone https://github.com/justincranford/jwe-encrypt-decrypt.git
+cd jwe-encrypt-decrypt
+go mod tidy
+```
 
 ## Running Tests
 
