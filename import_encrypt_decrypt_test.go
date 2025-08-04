@@ -27,8 +27,6 @@ func Test_Import_Encrypt(t *testing.T) {
 	rsaTC := rsaTestCase(t, 2048, jwa.A256GCM(), jwa.RSA_OAEP_256())
 	ecdhTC := ecdhTestCase(t, ecdh.P256(), jwa.A256GCM(), jwa.ECDH_ES_A256KW())
 
-	// Skipping ECDH test due to issues with the library
-
 	plaintext := []byte("Hello, World!")
 	for _, tc := range []tc{ecdhTC, rsaTC, aesTC} {
 		t.Run(tc.alg.String(), func(t *testing.T) {
