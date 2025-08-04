@@ -23,9 +23,9 @@ type tc struct {
 }
 
 func Test_Import_Encrypt(t *testing.T) {
-	aesTC := aesTestCase(t, 256, jwa.A256GCM(), jwa.A256KW())
-	rsaTC := rsaTestCase(t, 2048, jwa.A256GCM(), jwa.RSA_OAEP_256())
 	ecdhTC := ecdhTestCase(t, ecdh.P256(), jwa.A256GCM(), jwa.ECDH_ES_A256KW())
+	rsaTC := rsaTestCase(t, 2048, jwa.A256GCM(), jwa.RSA_OAEP_256())
+	aesTC := aesTestCase(t, 256, jwa.A256GCM(), jwa.A256KW())
 
 	plaintext := []byte("Hello, World!")
 	for _, tc := range []tc{ecdhTC, rsaTC, aesTC} {
